@@ -2,6 +2,25 @@ import pandas as pd
 import streamlit as st
 
 st.title("細菌鑑定工具")
+st.info('輸入細菌的形態、革蘭氏染色與各項生化反應結果，系統會與資料庫中的 10 株菌逐一比對，回傳符合的菌種。')
+st.markdown("""
+1. 依實驗結果，選擇下方 13 項特徵，例如：Shape 選桿菌或球菌，其餘選 +、-、x。
+2. 全部選完後，按「開始鑑定」。
+3. 若有完全吻合的菌會直接顯示；沒有的話，會列出最接近的菌，並標示差異的項目。
+""")
+with st.expander("比對規則"):
+    st.markdown("""
+1. 13 項特徵必須與資料庫完全一致，才算完全吻合。
+2. x 代表資料庫中該項反應不固定（variable reaction），比對時視為一個獨立的值。
+3. 沒有完全吻合時，依差異項數由少到多排序，差異數並列的菌會一併顯示。    
+""")
+with st.expander("資料來源與限制"):
+    st.markdown("""
+1. 特徵資料整理自教科書
+2. 資料庫目前只有 10 株菌；採精確比對，任何一項實驗判讀有誤都會影響結果；結果僅供教學與研究參考。
+""")
+st.divider()
+
 df = pd.read_csv('bacteria_20250601.csv', encoding='utf-8-sig', dtype=str)
 df = df.dropna(how='all')
 
