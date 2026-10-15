@@ -82,9 +82,8 @@ st.write("""
 3. x: variable reaction
 """)
 
-st.divider()
-
-if st.button("開始鑑定"):                      
+if st.button("開始鑑定"):
+    st.divider()                      
     if len(user_input) < len(features):       
         st.warning("請選擇所有特徵值")                        
     else:                                      
