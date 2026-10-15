@@ -11,7 +11,7 @@ st.markdown("""
 with st.expander("比對規則"):
     st.markdown("""
 1. 13 項特徵必須與資料庫完全一致，才算完全吻合。
-2. x 代表資料庫中該項反應不固定（variable reaction），比對時視為一個獨立的值。
+2. x 代表資料庫中該項為variable reaction，比對時視為一個獨立的值。
 3. 沒有完全吻合時，依差異項數由少到多排序，差異數並列的菌會一併顯示。    
 """)
 with st.expander("資料來源與限制"):
@@ -25,10 +25,9 @@ df = pd.read_csv('bacteria_20250601.csv', encoding='utf-8-sig', dtype=str)
 df = df.dropna(how='all')
 
 
-st.write("共有", len(df), "株菌")
 with st.expander("查看資料庫"):
     st.dataframe(df, hide_index=True)
-
+st.write("共有", len(df), "株菌")
 
 def is_match(row, user_input):
     for key, val in user_input.items():
@@ -77,6 +76,13 @@ for i, f in enumerate(features):
             if choice is not None:           
                 user_input[f] = choice
 
+st.write("""
+1. +: positive
+2. -: negative
+3. x: variable reaction
+""")
+
+st.divider()
 
 if st.button("開始鑑定"):                      
     if len(user_input) < len(features):       
