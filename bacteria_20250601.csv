@@ -1,0 +1,18 @@
+﻿Bacteria,Shape,Gram stain,Lipid hydrolysis,Lactose fermentation,Catalase test,Oxidase test,H2S production,Indole production,Citrate utilization test,NO3 production,Urease test,MR reaction,VP reaction
+Escherichia coli,1,-,-,+,+,-,-,+,-,+,-,+,-
+Enterobacter aerogenes,1,-,-,+,+,-,-,-,+,+,-,-,+
+Klebsiella pneumoniae,1,-,-,+,+,-,-,-,+,+,+,x,x
+Shigella Dysenteriae,1,-,-,-,+,-,-,x,-,+,-,+,-
+Salmonella typhimurium,1,-,-,-,+,-,+,-,+,+,-,+,-
+Proteus vulgaris,1,-,-,-,+,-,+,+,x,+,+,+,-
+Pseudomonas aeruginosa,1,-,+,-,+,+,-,-,+,+,-,-,-
+Staphylococcus aureus,2,+,+,+,+,-,-,-,-,+,-,+,x
+Lactococcus lactis,2,+,-,+,-,-,-,-,-,-,-,+,-
+Micrococcus luteus,2,+,-,-,+,-,-,-,-,x,+,-,-
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
